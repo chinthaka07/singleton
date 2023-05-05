@@ -1,6 +1,9 @@
 public class Singleton {
-    private Singleton(){}
+    private static Singleton singleton=null;
     public static Singleton getInstance(){
-        return new Singleton();
+        if (singleton==null){
+            singleton = new Singleton();
+        }
+        return singleton;
     }
 }
